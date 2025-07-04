@@ -36,11 +36,11 @@ ehthumbs.db
 TestResults/
 
 # Docker
-**/docker-compose*.yml
-**/Dockerfile
+# **/docker-compose*.yml
+# **/Dockerfile
 
 # Entity Framework
-Migrations/
+# Migrations/
 
 # Postman
 *.postman_collection.json 

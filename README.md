@@ -25,6 +25,16 @@ Serwisy komunikują się asynchronicznie przez RabbitMQ oraz synchronicznie prze
 
 ## 3. Instrukcja uruchamiania
 
+### Najszybszy start – uruchomienie wszystkiego przez Docker Compose
+
+1. Upewnij się, że masz zainstalowanego Dockera i Docker Compose.
+2. W katalogu głównym projektu uruchom:
+   ```sh
+   docker-compose up --build
+   ```
+
+To polecenie zbuduje i uruchomi wszystkie serwisy oraz RabbitMQ. Po chwili aplikacja będzie dostępna na odpowiednich portach (sprawdź docker-compose.yml i README poniżej).
+
 ### Wymagania systemowe
 - .NET 8 SDK
 - Docker (jeśli chcesz uruchomić RabbitMQ i/lub bazę w kontenerze)
@@ -55,6 +65,32 @@ dotnet run --project PredictionService/PredictionService.csproj
    ```sh
 dotnet test
 ```
+
+### 4. Wykonanie migracji bazy danych
+
+Aby utworzyć tabele w bazie danych, należy wykonać migracje dla każdego serwisu:
+
+1. **Zainstaluj narzędzie Entity Framework Core Tools (jeśli nie masz):**
+   ```sh
+   dotnet tool install --global dotnet-ef
+   ```
+
+2. **W katalogu każdego serwisu wykonaj migracje:**
+   ```sh
+   cd UserService
+   dotnet ef database update
+   cd ..
+
+   cd ReservationService
+   dotnet ef database update
+   cd ..
+
+   cd PredictionService
+   dotnet ef database update
+   cd ..
+   ```
+
+Po tej operacji bazy danych będą gotowe do użycia przez aplikację.
 
 ---
 

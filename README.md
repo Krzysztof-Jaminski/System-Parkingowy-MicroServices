@@ -59,7 +59,6 @@ dotnet run --project PredictionService/PredictionService.csproj
    - http://localhost:5000/swagger (UserService)  
    - http://localhost:5001/swagger (ReservationService)  
    - http://localhost:5002/swagger (PredictionService)  
-   *(porty mogą się różnić w zależności od konfiguracji)*
 
 5. **Testy**
    ```sh
@@ -97,15 +96,16 @@ Po tej operacji bazy danych będą gotowe do użycia przez aplikację.
 ## 4. Zrzuty ekranu
 
 ### Swagger - UserService
-![Swagger UserService](screenshots/swagger-userservice.png)
+![image](https://github.com/user-attachments/assets/0391b55d-c767-4b56-bf50-26f15cdcf465)
 
 ### Swagger - ReservationService
-![Swagger ReservationService](screenshots/swagger-reservationservice.png)
+![image](https://github.com/user-attachments/assets/2e54a449-f89b-4865-8be6-e03e4068fa97)
 
 ### Swagger - PredictionService
-![Swagger PredictionService](screenshots/swagger-predictionservice.png)
+![image](https://github.com/user-attachments/assets/e52cfcf8-b8c2-43ff-892f-27151b10fe36)
 
-### Testy przechodzą
+
+### Testy
 ![Testy przechodzą](screenshots/tests-passing.png)
 
 ---

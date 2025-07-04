@@ -1,0 +1,46 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# Others
+*.DS_Store
+*.vs/
+
+# Test Results
+TestResults/
+
+# Docker
+**/docker-compose*.yml
+**/Dockerfile
+
+# Entity Framework
+Migrations/
+
+# Postman
+*.postman_collection.json 
